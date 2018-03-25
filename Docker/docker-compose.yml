@@ -5,7 +5,7 @@ services:
     ports:
      - "1880:1880"
     volumes:
-     - /home/m2m/Docker/data/nodered:/data
+     - /home/m2m/Docker/Projet_M2M/Docker/data/nodered:/data
   MongoDB:
     image: "mongo"
     ports:
