@@ -20,4 +20,7 @@ EXPOSE 1880
 ENV FLOWS=flows.json
 ENV NODE_PATH=/usr/src/node-red/node_modules:/data/node_modules
 
+# Install MongoDB Module 
+RUN npm install node-red-node-mongodb
+
 CMD ["npm", "start", "--", "--userDir", "/data"]

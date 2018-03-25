@@ -6,3 +6,17 @@ services:
      - "1880:1880"
     volumes:
      - /home/m2m/Docker/data/nodered:/data
+  MongoDB:
+    image: "mongo"
+    ports:
+     - "27017:27017"
+    volumes:
+     - /home/m2m/Docker/data/mongodb:/data/db
+  eclipse-mosquitto:
+    image: "eclipse-mosquitto"
+    ports:
+     - "1883:1883"
+     - "9001:9001"
+    volumes:
+     - /home/m2m/Docker/data/mosquitto/data:/mosquitto/data
+     - /home/m2m/Docker/data//mosquitto/log:/mosquitto/log
