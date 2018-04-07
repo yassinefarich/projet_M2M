@@ -1,32 +1,32 @@
 #!/bin/sh
 
-# multiple records for test VIN
+# multiple records for test VIN 45.19342, 5.76704 ; 45.19383, 5.7671; 45.19344, 5.76659 ; 45.19395, 5.76695
 
 curl \
     -i \
     -H "Content-type: application/json" \
     -X POST \
-    -d '{"vin":"testvin", "timestamp":1234567890, "latitude":40.0, "longitude":-8.1, "readings":{"speed":"55","rpm":"3000"}}' \
-    "http://localhost:8080/obd"
+    -d '{"carId":"1","vin":"testvin", "timestamp":1234567890, "latitude":45.19342, "longitude":5.76704, "readings":{"speed":"55","rpm":"3000"}}' \
+    "http://192.168.56.102:1880/obd"
 
 curl \
     -i \
     -H "Content-type: application/json" \
     -X POST \
-    -d '{"vin":"testvin", "timestamp":1234568999, "latitude":40.1, "longitude":-8.2, "readings":{"speed":"65","rpm":"3200"}}' \
-    "http://localhost:8080/obd/"
+    -d '{"carId":"2","vin":"testvin", "timestamp":1234568999, "latitude":45.19383, "longitude":5.7671, "readings":{"speed":"65","rpm":"3200"}}' \
+    "http://192.168.56.102:1880/obd/"
 
 curl \
     -i \
     -H "Content-type: application/json" \
     -X POST \
-    -d '{"vin":"testvin", "timestamp":1234589999, "latitude":40.2, "longitude":-8.3, "readings":{"speed":"75","rpm":"4000"}}' \
-    "http://localhost:8080/obd/"
+    -d '{"carId":"3","vin":"testvin", "timestamp":1234589999, "latitude":45.19344, "longitude":5.76659, "readings":{"speed":"75","rpm":"4000"}}' \
+    "http://192.168.56.102:1880/obd/"
 
 # different VIN
 curl \
     -i \
     -H "Content-type: application/json" \
     -X POST \
-    -d '{"vin":"othervin", "timestamp":1234567890, "latitude":40.0, "longitude":-8.1, "readings":{"speed":"55","rpm":"3000"}}' \
-    "http://localhost:8080/obd/"
+    -d '{"carId":"4","vin":"othervin", "timestamp":1234567890, "latitude":45.19395, "longitude":5.76695, "readings":{"speed":"55","rpm":"3000"}}' \
+    "http://192.168.56.102:1880/obd/"
