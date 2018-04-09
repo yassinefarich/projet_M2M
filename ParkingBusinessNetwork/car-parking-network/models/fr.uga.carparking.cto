@@ -1,0 +1,22 @@
+/**
+ * Write your model definitions here
+ */
+
+namespace fr.uga.carparking
+
+asset ParkingPoint identified by pointId {
+    o String pointId
+    o String description
+    o Double hourValue
+    --> ParkingPointOwner owner
+}
+participant ParkingPointOwner identified by ownerId {
+    o String ownerId
+    o String carId 
+    o String firstName
+    o String lastName
+}
+transaction Billing {
+    --> ParkingPoint parkingPoint
+    o Double parkingHours
+} 
