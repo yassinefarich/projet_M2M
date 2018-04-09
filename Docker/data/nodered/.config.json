@@ -550,35 +550,6 @@
      "file": "/data/node_modules/node-red-contrib-sequence-functions/lib/sequence-functions.js"
     }
    }
-  },
-  "node-red-contrib-composer": {
-   "name": "node-red-contrib-composer",
-   "version": "0.0.10",
-   "local": true,
-   "nodes": {
-    "hperledger-composer": {
-     "name": "hperledger-composer",
-     "types": [
-      "hyperledger-composer-out",
-      "hyperledger-composer-mid",
-      "hyperledger-composer-in"
-     ],
-     "enabled": false,
-     "local": true,
-     "module": "node-red-contrib-composer",
-     "file": "/data/node_modules/node-red-contrib-composer/nodes/hyperledger-composer.js"
-    },
-    "hperledger-composer-config": {
-     "name": "hperledger-composer-config",
-     "types": [
-      "hyperledger-composer-config"
-     ],
-     "enabled": true,
-     "local": true,
-     "module": "node-red-contrib-composer",
-     "file": "/data/node_modules/node-red-contrib-composer/nodes/hyperledger-composer-config.js"
-    }
-   }
   }
  },
  "_credentialSecret": "86c9e380514cbd617f7c1a34e1c889cbcd090fcd30fc5da6ee9b9f3d726c499c",
